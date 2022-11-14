@@ -1,0 +1,320 @@
+version: "3.7"
+
+services:
+  sdg-1:
+    image: tensorflow/serving:2.6.3-gpu
+    ports:
+      - '8501:8501'
+    container_name: sdg-serving-1
+    volumes:
+      - ${MODEL_DIR}:/models
+    command:
+      - '--model_name=sdg1'
+      - '--model_base_path=/models/sdg1'
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [ gpu ]
+  sdg-2:
+    image: tensorflow/serving:2.6.3-gpu
+    ports:
+      - '8502:8501'
+    container_name: sdg-serving-2
+    volumes:
+      - ${MODEL_DIR}:/models
+    command:
+      - '--model_name=sdg2'
+      - '--model_base_path=/models/sdg2'
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [ gpu ]
+  sdg-3:
+    image: tensorflow/serving:2.6.3-gpu
+    restart: always
+    ports:
+      - '8503:8501'
+    container_name: sdg-serving-3
+    volumes:
+      - ${MODEL_DIR}:/models
+    command:
+      - '--model_name=sdg3'
+      - '--model_base_path=/models/sdg3'
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [ gpu ]
+  sdg-4:
+    image: tensorflow/serving:2.6.3-gpu
+    restart: always
+    ports:
+      - '8504:8501'
+    container_name: sdg-serving-4
+    volumes:
+      - ${MODEL_DIR}:/models
+    command:
+      - '--model_name=sdg4'
+      - '--model_base_path=/models/sdg4'
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [ gpu ]
+  sdg-5:
+    image: tensorflow/serving:2.6.3-gpu
+    restart: always
+    ports:
+      - '8505:8501'
+    container_name: sdg-serving-5
+    volumes:
+      - ${MODEL_DIR}:/models
+    command:
+      - '--model_name=sdg5'
+      - '--model_base_path=/models/sdg5'
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [ gpu ]
+  sdg-6:
+    image: tensorflow/serving:2.6.3-gpu
+    restart: always
+    ports:
+      - '8506:8501'
+    container_name: sdg-serving-6
+    volumes:
+      - ${MODEL_DIR}:/models
+    command:
+      - '--model_name=sdg6'
+      - '--model_base_path=/models/sdg6'
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [ gpu ]
+  sdg-7:
+    image: tensorflow/serving:2.6.3-gpu
+    restart: always
+    ports:
+      - '8507:8501'
+    container_name: sdg-serving-7
+    volumes:
+      - ${MODEL_DIR}:/models
+    command:
+      - '--model_name=sdg7'
+      - '--model_base_path=/models/sdg7'
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [ gpu ]
+  sdg-8:
+      image: tensorflow/serving:2.6.3-gpu
+      restart: always
+      ports:
+        - '8508:8501'
+      container_name: sdg-serving-8
+      volumes:
+        - ${MODEL_DIR}:/models
+      command:
+        - '--model_name=sdg8'
+        - '--model_base_path=/models/sdg8'
+      deploy:
+        resources:
+          reservations:
+            devices:
+              - driver: nvidia
+                count: 1
+                capabilities: [ gpu ]
+  sdg-9:
+      image: tensorflow/serving:2.6.3-gpu
+      restart: always
+      ports:
+        - '8509:8501'
+      container_name: sdg-serving-9
+      volumes:
+        - ${MODEL_DIR}:/models
+      command:
+        - '--model_name=sdg9'
+        - '--model_base_path=/models/sdg9'
+      deploy:
+        resources:
+          reservations:
+            devices:
+              - driver: nvidia
+                count: 1
+                capabilities: [ gpu ]
+  sdg-10:
+      image: tensorflow/serving:2.6.3-gpu
+      restart: always
+      ports:
+        - '8510:8501'
+      container_name: sdg-serving-10
+      volumes:
+        - ${MODEL_DIR}:/models
+      command:
+        - '--model_name=sdg10'
+        - '--model_base_path=/models/sdg10'
+      deploy:
+        resources:
+          reservations:
+            devices:
+              - driver: nvidia
+                count: 1
+                capabilities: [ gpu ]
+  sdg-11:
+    image: tensorflow/serving:2.6.3-gpu
+    restart: always
+    ports:
+      - '8511:8501'
+    container_name: sdg-serving-11
+    volumes:
+      - ${MODEL_DIR}:/models
+    command:
+      - '--model_name=sdg11'
+      - '--model_base_path=/models/sdg11'
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [ gpu ]
+  sdg-12:
+    image: tensorflow/serving:2.6.3-gpu
+    restart: always
+    ports:
+      - '8512:8501'
+    container_name: sdg-serving-12
+    volumes:
+      - ${MODEL_DIR}:/models
+    command:
+      - '--model_name=sdg12'
+      - '--model_base_path=/models/sdg12'
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [ gpu ]
+  sdg-13:
+    image: tensorflow/serving:2.6.3-gpu
+    restart: always
+    ports:
+      - '8513:8501'
+    container_name: sdg-serving-13
+    volumes:
+      - ${MODEL_DIR}:/models
+    command:
+      - '--model_name=sdg13'
+      - '--model_base_path=/models/sdg13'
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [ gpu ]
+  sdg-14:
+    image: tensorflow/serving:2.6.3-gpu
+    restart: always
+    ports:
+      - '8514:8501'
+    container_name: sdg-serving-14
+    volumes:
+      - ${MODEL_DIR}:/models
+    command:
+      - '--model_name=sdg14'
+      - '--model_base_path=/models/sdg14'
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [ gpu ]
+  sdg-15:
+    image: tensorflow/serving:2.6.3-gpu
+    restart: always
+    ports:
+      - '8515:8501'
+    container_name: sdg-serving-15
+    volumes:
+      - ${MODEL_DIR}:/models
+    command:
+      - '--model_name=sdg15'
+      - '--model_base_path=/models/sdg15'
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [ gpu ]
+  sdg-16:
+    image: tensorflow/serving:2.6.3-gpu
+    restart: always
+    ports:
+      - '8516:8501'
+    container_name: sdg-serving-16
+    volumes:
+      - ${MODEL_DIR}:/models
+    command:
+      - '--model_name=sdg16'
+      - '--model_base_path=/models/sdg16'
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [ gpu ]
+  sdg-17:
+    image: tensorflow/serving:2.6.3-gpu
+    restart: always
+    ports:
+      - '8517:8501'
+    container_name: sdg-serving-17
+    volumes:
+      - ${MODEL_DIR}:/models
+    command:
+      - '--model_name=sdg17'
+      - '--model_base_path=/models/sdg17'
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [ gpu ]
+  sdg-model-api:
+    image: etspielberg/sdg-model-api
+    restart: always
+    volumes:
+      - ${CERT_DIR}:/cert
+    ports:
+      - '5000:5000'
+    container_name: sdg-model-api
+
+volumes:
+  webapps:
+  userfiles:
+  models:

@@ -1,0 +1,11 @@
+nltk
+transformers
+tensorflow
+py_eureka_client
+flask_cors
+flask
+flask_bootstrap
+Flask-Caching
+gunicorn
+matplotlib
+requests-cache
